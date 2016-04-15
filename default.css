@@ -1,0 +1,178 @@
+/*footer {
+    position: fixed;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+.footer, .push {
+	height: 155px; /* .push must be the same height as .footer 
+}*/
+
+body{
+  background-image: url(images/scribble_light.png);
+  background-repeat: repeat repeat;
+}
+
+footer{
+  padding-bottom: 40px;
+}
+
+table{
+  /*table-layout: fixed;*/
+  /*word-wrap: break-word;*/
+  overflow: hidden;
+  background: white;
+  font-size: 18px;
+  width: 100%;
+  border-radius: 6px;
+}
+td{
+  height: 40px;
+}
+
+.finecolor{
+    background-color: #fafafa;
+  background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: linear-gradient(to bottom, #ffffff, #99ddff);
+  background-repeat: repeat-x;
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
+  
+}
+
+
+#login-modal{
+  margin-left: -200px;
+  max-width: 400px;
+}
+
+.form-horizontal .controls {
+  margin-left: 80px;
+}
+.form-horizontal .control-label {
+  width: 80px;
+  text-align: right;
+}
+
+.carousel-caption{
+  /*background: transparent 50%;
+  max-height: 40px;*/
+  background: rgba(0, 80, 100, 0.45);
+  /*height: 50px;*/
+}
+
+@media(max-width: 480px){
+  .carousel-caption{
+    background: #5bc0de;
+    height: 60px;
+  }
+
+  #login-modal{
+  margin-left: 0px;
+  }
+
+  .form-horizontal .control-label {
+    float: left;
+  }
+}
+
+@media(max-width: 767px){
+  #login-modal{
+    margin-left: 0px;
+  }
+}
+
+li{
+	list-style: none;
+}
+
+.modal-body{
+  background-image: url(images/scribble_light.png);
+}
+
+.modal{
+  top: 20%px;
+  /*left:50%;*/
+  min-width:300px;
+  max-width:540px;
+  width:50%;
+}
+ 
+.btnExtra{
+  padding-left:50px;
+  padding-right:50px;
+}
+
+
+[class*="social foundicon-"]:before {font-family: "SocialFoundicons";}
+[class*="general foundicon-"]:before {font-family: "GeneralFoundicons";}
+
+ul#contact-info .icon {
+	font-size:20px;float:left;line-height:25px;margin-right:10px;
+}
+ul#contact-info .field {
+	font-weight:bold;
+}
+ul#contact-info {
+	list-style:none;
+}
+
+.c-select {
+  display: inline-block;
+  max-width: 100%;
+  line-height: 15px;
+  -webkit-appearance: none;
+  padding: .375rem 1.75rem .375rem .75rem;
+  padding-right: .75rem \9;
+  vertical-align: middle;
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right .75rem center;
+  background-image: none \9;
+  -webkit-background-size: 8px 10px;
+          background-size: 8px 10px;
+  border: 1px solid #ccc;
+     -moz-appearance: none;
+}
+
+.c-select:focus {
+  border-color: #51a7e8;
+  outline: none;
+}
+
+.c-select::-ms-expand {
+  opacity: 0;
+}
+
+.c-select-sm {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 12px;
+}
+
+.c-select-sm:not([multiple]) {
+  height: 26px;
+  min-height: 26px;
+}
+
+#top-link-block.affix-top {
+    position: absolute; /* allows it to "slide" up into view */
+    bottom: -82px; /* negative of the offset - height of link element */
+    left: 10px; /* padding from the left side of the window */
+}
+#top-link-block.affix {
+    position: fixed; /* keeps it on the bottom once in view */
+    bottom: 18px; /* height of link*/
+}
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}

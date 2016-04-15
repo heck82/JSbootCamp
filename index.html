@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Your Job Board - Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.css">
+
+	<link href="icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet" type="text/css">  
+    <link href="icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="default.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+
+
+<body>
+<nav class="navbar" role="navigation">
+	<div class="container-fluid">
+	<div class="navbar-inner">
+		<div class="container">
+  			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    		<span class="icon-bar"></span>
+   			<span class="icon-bar"></span>
+   			<span class="icon-bar"></span>
+  			</a>
+		<a class="brand" href="#">Your Job Board</a>
+		<div class="nav-collapse collapse">
+		<ul class="nav pull-right">
+		<li class="divider-vertical"></li>
+  		<li class="active"><a href="#">Home</a></li>
+ 		<li><a href="#about">About us</a></li>
+ 		<li><a href="#news">News</a></li>
+ 		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+  			For Companies <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+  			<li><a href="#login-modal" data-toggle="modal">LogIn</a></li>
+  			<li class="divider"></li>
+  			<li><a href="#AddVac" data-toggle="modal">Add Vacancy</a></li>
+			</ul>
+			<li class="divider-vertical"></li>
+		</li>
+		<li>
+			<form class="navbar-search pull-left">
+				<input type="text" class="search-query span" placeholder="Search on site">
+			</form>
+		</li>
+
+		</ul>
+		</div>
+		</div>
+	</div>
+	</div>
+</nav>
+
+<div tabindex="-1" class="modal hide fade" id="AddVac" role="dialog" aria-hidden="true">
+	<div class="modal-header finecolor">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h1 class="text-center" id="myModalLabel">Add a New Vacancy for your company</h1>
+	</div>
+	<div class="modal-body">
+		<form class="form-horizontal">
+			
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btnExtra btn-large btn-primary" id="add">Add</button>
+	</div>
+</div>
+
+<div tabindex="-1" class="modal hide fade" id="login-modal" role="dialog" aria-hidden="true">
+    <div class="modal-header finecolor">
+    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h1 class="text-center" id="myModalLabel">Login to Your Account</h1>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="control-group">
+            	<label class="control-label" for="inputEmail">E-mail  <i class="social foundicon-torso"></i></label>
+                <div class="controls">
+                    <input class="input-block-level input-lg" id="inputEmail" type="text" placeholder="User name" required>
+
+                </div>
+            </div>
+            <div class="control-group">
+            <label class="control-label" for="inputPassword">Password  <i class="general foundicon-lock"></i>  </label>
+                <div class="controls">
+                    <input class="input-block-level" id="password" type="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="checkbox">
+                    <input type="checkbox">Remember me</label>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+      	<button class="btn btn-link">Register</button>
+      	<button class="btn btn-link">Forgot password?</button>
+        <button class="btn btnExtra btn-large btn-primary" id="login">Login</button>
+    </div>
+</div><!-- login modal -->
+
+<div class="fluid container">
+	<div id="myCarousel" class="carousel slide">
+		<ol class="carousel-indicators">
+		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#myCarousel" data-slide-to="1"></li>
+		    <li data-target="#myCarousel" data-slide-to="2"></li>
+	  	</ol>
+	  	<div class="carousel-inner" role="listbox">
+		    <div class="active item">
+		    	<img src="images/1.jpg" alt="">
+		    	<div class="carousel-caption">
+			        <h4>Your Start Here</h4>
+			        <p>Just push the SEARCH button!</p>
+	            </div>
+		    </div>
+		    <div class="item">
+		    	<img src="images/2.jpg" alt="">
+		    	<div class="carousel-caption">
+			        <h4>All Jobs in your pocket</h4>
+			        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+	            </div>
+	        </div>
+		    <div class="item">
+		    	<img src="images/3.jpg" alt="">
+		    	<div class="carousel-caption">
+			        <h4>Find yorself, so easy</h4>
+			        <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	            </div>
+		    </div>
+	  	</div>
+	  	<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	  	<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+</div> <!-- carusel -->
+
+<div class="visible-desktop"><div class="separator"><br><br><br><br></div></div>
+
+
+<div class="container" ng-app="myApp" ng-controller="myCtrl">
+	<form class="form-inline">
+	<!-- <form class="form-inline" ng-show="showMe"> -->
+		<div class="row-fluid">
+			<div class="span9">
+				<input type="text" class="form-control input-lg span6" placeholder="choose a category" list="category" ng-model="catgo">
+				<datalist id="category">
+		  			<option value="IT">IT</option>
+		  			<option value="Sales">Sales</option>
+		  			<option value="PR">PR</option>
+		  			<option value="Marketing">Marketing</option>
+				</datalist>
+				<input type="text" class="form-control input-lg span6" placeholder="type a city" list="states" ng-model="city">
+				<datalist id="states">
+					<option value="Lviv">Lviv</option>
+					<option value="Kyiv">Kyiv</option>
+					<option value="Odesa">Odesa</option>
+					<option value="Kharkiv">Kharkiv</option>
+					<option value="Ternopol">Ternopol</option>
+					<option value="Lutsk">Lutsk</option>
+					<option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+					<option value="Vinnytsa">Vinnytsa</option>
+				</datalist>
+			</div>
+			<button class="btn btn-info span3" id="search" ng-click="display()">SEARCH</button>
+		</div>
+	</form>
+	<div id="content" class="table-responsive">
+		<span class="h1">{{fail}}</span>
+		<table class="table table-hover table-condensed">
+			<tr ng-repeat="x in list | filter: city | filter: catgo">
+		    	<td class="span6">
+		    		<a class="span3" href="#{{x.id}}" data-toggle="modal">{{x.name}}</a>
+		    		<span class="span2">{{x.date}}</span>
+		    	</td>
+    			<td class="span6">
+	    			<span class="span3">{{x.location}}</span>
+	    			<span class="span2">{{x.category}}</span>
+    			</td>
+    		</tr>
+    	</table>
+	</div>
+	<div ng-repeat="x in list"><!-- jobs/// here ///jobs -->
+		<div tabindex="-1" class="modal hide fade" id="{{x.id}}" aria-hidden="true" role="dialog">
+			<div class="modal-header finecolor">
+		    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		        <h1 class="text-center" id="myModalLabel">{{x.name}}</h1>
+	    	</div>
+	    	<div class="modal-body">
+	            <p>{{x.description.intro}}</p>
+	            <h2>Requirements</h2>
+	            <p>{{x.description.req}}</p>
+	            <h2>We Offer</h2>
+	            <p>{{x.description.offer}}</p>
+	            <h2>Contact</h2>
+	            <p>{{x.description.contact}}</p>
+	            <div class="control-group">
+	                <label class="checkbox">
+	                <input type="checkbox">e mal</label>
+	            </div>
+	    	</div>
+	    	<div class="modal-footer">
+	        	<button class="btn btnExtra btn-large btn-primary" id="apply">apply</button>
+	    	</div>
+		</div>
+	</div><!-- jobs all here ............see -->
+</div><!-- search -->
+
+
+
+<div class="visible-desktop"><div class="separator"><br><br><br></div></div>
+
+
+<div class="container">
+	<div class="container" id="about">
+		<h3>About Us</h3>
+		<ul class="nav nav-pills nav-justified">
+	  		<li class="active"><a data-toggle="tab" href="#some1">About</a></li>
+	  		<li><a data-toggle="tab" href="#some2">our clients</a></li>
+	  		<li><a data-toggle="tab" href="#some3">our offices</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" id="some1">
+		        <p>We are the #1 job site worldwide, with over 180 million unique visitors per month. Company is available in more than 50 countries and 28 languages, covering 94% of global GDP.</p>
+		        <p>Since 2004, Company has given job seekers free access to millions of jobs from thousands of company websites and job boards. As the leading pay-for-performance recruitment advertising network, Company drives millions of targeted applicants to jobs in every field and is the most cost-effective source of candidates for thousands of companies.</p>
+		        <p>Founded by Paul Forster and Rony Kahan, Company is a subsidiary of Recruit Holdings Co., Ltd. In the US, Company has offices in Austin, New York, San Francisco, San Mateo, Seattle, and Stamford. Outside of the US, Company has offices located in Amsterdam, Dublin, Düsseldorf, Hyderabad, London, Paris, Sydney, Tokyo, and Toronto. </p>
+		    </div>
+		    <div class="tab-pane" id="some2">
+				<p>Since 2004, Company has given job seekers free access to millions of jobs from thousands of company websites and job boards. As the leading pay-for-performance recruitment advertising network, Company drives millions of targeted applicants to jobs in every field and is the most cost-effective source of candidates for thousands of companies.</p>
+			</div>	
+			<div class="tab-pane" id="some3">
+			<p>Founded by Paul Forster and Rony Kahan, Company is a subsidiary of Recruit Holdings Co., Ltd. In the US, Company has offices in Austin, New York, San Francisco, San Mateo, Seattle, and Stamford. Outside of the US, Company has offices located in Amsterdam, Dublin, Düsseldorf, Hyderabad, London, Paris, Sydney, Tokyo, and Toronto. </p>
+			</div>
+		</div>
+	</div>
+	<div class="separator"><br><br><br></div>
+	<div class="container" id="news">
+		<h3>News</h3>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<li class="span4">
+					<img data-src="holder.js/300x200" src="images/home-image-4.jpg" style="width: 300px; height: 200px;">
+					<div class="caption">
+	                    <h3>Winner this year</h3>
+	                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	                    <div id="more1" class="collapse">
+						    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					  	</div>
+	                    <p><a href="#more1" class="btn btn-info" data-toggle="collapse">more</a></p>
+	                  </div>
+				</li>
+				<li class="span4">
+					<img data-src="holder.js/300x200" src="images/home-image-2.jpg" style="width: 300px; height: 200px;">
+					<div class="caption">
+	                    <h3>Sociologic research</h3>
+	                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	                    <div id="more2" class="collapse">
+						    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					  	</div>
+	                    <p><a href="#more2" class="btn btn-info" data-toggle="collapse">more</a></p>
+	                  </div>
+				</li>
+				<li class="span4">
+					<img data-src="holder.js/300x200" src="images/home-image-1.jpg" style="width: 300px; height: 200px;">
+					<div class="caption">
+	                    <h3>Jobs on Arctic</h3>
+	                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	                    <div id="more3" class="collapse">
+						    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					  	</div>
+	                    <p><a href="#more3" class="btn btn-info" data-toggle="collapse">more</a></p>
+	                  </div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div><!-- about news e.g. -->
+
+<div class="separator"><br><br><br></div>
+
+<footer class="container muted navbar-inner">
+	<div class="row">
+		<div class="span4">
+            <h3>About Company</h3>
+
+            <p>We are the #1 job site worldwide, with over 180 million unique visitors per month. Company is available in more than 50 countries and 28 languages, covering 94% of global GDP.</p>
+            
+            <p> 
+                <a href="#" title="Terms of Use">Terms of Use</a><br>
+                <a href="#" title="Privacy Policy">Privacy Policy</a><br>
+                <a href="#" title="FAQ">FAQ</a><br>
+                <a href="#" title="Sitemap">Sitemap</a>
+            </p>
+		</div>
+		<div class="span4">
+            <h3>Recent Blog Posts</h3> 
+            <p>
+                <a href="#" title="">In the US, Company has offices in Austin</a><br>
+                <span style="text-transform:none;">2 hours ago</span>
+            </p>
+            <p>
+                <a href="#" title="">Founded by Paul Forster and Rony Kahan</a><br>
+                <span style="text-transform:none;">5 hours ago</span>
+            </p>
+            <p>
+                <a href="#" title="">As the leading pay-for-performance</a><br>
+                <span style="text-transform:none;">19 hours ago</span>
+            </p>
+            <p>
+                <a href="#" title="">VIEW ALL POSTS</a>
+            </p>
+		</div>
+		<div class="span4">
+		    <h3>Get in Touch</h3>  
+		    <ul id="contact-info">
+		    <li>
+		    	<i class="general foundicon-phone icon"></i>
+		    	<span class="field">Phone:</span>
+		    	<br>
+		    	(123) 456 7890 / 456 7891
+		    </li>
+		    <li>
+		    	<i class="general foundicon-mail icon"></i>
+		    	<span class="field">Email:</span>
+		    	<br>
+		    	<a href="mailto:info@yourdomain.com" title="Email">info@yourdomain.com</a>
+		    </li>
+		    <li>
+		    	<i class="general foundicon-home icon" style="margin-bottom:50px"></i>
+		    	<span class="field">Address:</span>
+		    	<br>
+		    	123 Street<br>
+		    	12345 City, State<br>
+		    	Country
+		    </li>
+		    </ul>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<p class="social_bookmarks span6 pull-right">
+		    <a href="#"><i class="social foundicon-facebook"></i>&nbsp;Facebook</a>
+			<a href="#"><i class="social foundicon-twitter"></i>&nbsp;Twitter</a>
+			<a href="#"><i class="social foundicon-pinterest"></i>&nbsp;Pinterest</a>
+			<a href="#"><i class="social foundicon-rss"></i>&nbsp;Rss</a>
+		</p>
+		<p class="muted span6">Copyright © 2013 Your Job Board. All Rights Reserved.</p>
+		</div>
+</footer>
+
+<span id="top-link-block" class="hidden">
+	<a href="#top" class="btn btn-warning" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"><i class="general foundicon-up-arrow icon"></i>On Top</a>
+</span><!-- /top-link-block -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script src="script/customed.js" type="text/javascript"></script>
+<script src="script/ang.js" type="text/javascript"></script>
+<!-- <script src="script/services.js" type="text/javascript"></script> -->
+
+</body>
+</html>
